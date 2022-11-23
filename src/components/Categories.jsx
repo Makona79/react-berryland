@@ -1,18 +1,24 @@
 import React from "react";
+import { useState } from "react";
 
 export const Categories = () => {
-	return (
-		<ul className="shop__nav">
-			<li className="shop__list _active" data-filter="all">
-				Все продукты
-			</li>
-			<li className="shop__list" data-filter="berry">
-				Ягоды
-			</li>
-			<li className="shop__list" data-filter="superfood">
-				Суперфуд
-			</li>
-		</ul>
-	);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const onClickCategory = (index) => {
+    setActiveIndex(index);
+  };
+  const categories = ["Все продукты", "Ягоды", "Суперфуд"];
+  return (
+    <ul className="shop__nav">
+      {categories.map((value, i) => (
+        <li
+          onClick={() => onClickCategory(i)}
+          className={activeIndex === i ? "shop__list _active" : "shop__list"}
+          key={i}
+        >
+          {value}
+        </li>
+      ))}
+    </ul>
+  );
 };
 export default Categories;
