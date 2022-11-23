@@ -7,6 +7,28 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 
 function App() {
+	const fruct = [
+		{
+			"id": 0,
+			"imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
+			"title": "Пепперони Фреш с перцем",
+			"priceNew": 83,
+			"priceOld": 93,
+			"category": 0,
+			"types": [0, 1],
+			"sizes": 2.5,
+		},
+		{
+			"id": 1,
+			"imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
+			"title": "Пепперони Фреш с перцем",
+			"priceNew": 83,
+			"priceOld": 93,
+			"category": 0,
+			"types": [0, 1],
+			"sizes": 1,
+		 },
+	]
 	return (
 		<div className="wrapper">
 			<h1 className="visually-hidden">
