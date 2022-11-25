@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-export const Card = (props) => {
+export const Card = ({ title, imageUrl, priceNew, priceOld, sizes }) => {
   const [cardCount, setCardCount] = useState(1);
   const plusCountCard = () => {
     setCardCount(cardCount + 1);
@@ -11,17 +11,17 @@ export const Card = (props) => {
   };
   return (
     <article className="shop__card card" data-item="berry" data-pid="1">
-      <h4 className="card__title">{props.title}</h4>
+      <h4 className="card__title">{title}</h4>
       <a href="#" className="card__image">
         <picture>
           <source srcSet="img/card/card01.webp" type="image/webp" />
-          <img src="img/card/card01.png" alt="Малина замороженная Премиум" />
+          <img src={imageUrl} alt="Малина замороженная Премиум" />
         </picture>
       </a>
       <div className="card__box-price">
-        <div className="card__price card__price_new rub">{props.priceNew}</div>
-        <div className="card__price_old rub">{props.priceOld}</div>
-        <div className="card__volume">за 2.5 кг</div>
+        <div className="card__price card__price_new rub">{priceNew}.00</div>
+        <div className="card__price_old rub">{priceOld}</div>
+        <div className="card__volume">за {sizes} кг</div>
       </div>
       <div className="card__box-button">
         <div className="card__quantity">

@@ -10,21 +10,41 @@ function App() {
 	const fruct = [
 		{
 			"id": 0,
-			"imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
-			"title": "Пепперони Фреш с перцем",
-			"priceNew": 83,
-			"priceOld": 93,
+			"imageUrl": "img/card/card01.png",
+			"title": "Малина замороженная Премиум (2.5 кг)",
+			"priceNew": 85.00,
+			"priceOld": 93.00,
 			"category": 0,
 			"types": [0, 1],
 			"sizes": 2.5,
 		},
 		{
 			"id": 1,
-			"imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
-			"title": "Пепперони Фреш с перцем",
-			"priceNew": 83,
-			"priceOld": 93,
+			"imageUrl": "img/card/card02.png",
+			"title": "Голубика замороженная",
+			"priceNew": 93.00,
+			
 			"category": 0,
+			"types": [0, 1],
+			"sizes": 1,
+		 },
+		 {
+			"id": 2,
+			"imageUrl": "img/card/card03.png",
+			"title": "Вишня замороженная",
+			"priceNew": 87.00,
+			"priceOld": 93.00,
+			"category": 0,
+			"types": [0, 1],
+			"sizes": 1,
+		 },
+		 {
+			"id": 3,
+			"imageUrl": "img/card/card04.png",
+			"title": "Куркума с имбирем замороженные органические",
+			"priceNew": 93.00,
+			
+			"category": 1,
 			"types": [0, 1],
 			"sizes": 1,
 		 },
@@ -44,13 +64,11 @@ function App() {
 							<Categories />
 							<div className="shop__filter">
 								<div className="shop__menu">
-									<Card
-										title="Малина замороженная Премиум (2.5 кг)"
-										priceNew="85.00"
-										priceOld="93.00"
-									/>
-									<Card title="Голубика замороженная" priceNew="85.00" />
-									<Card title="Вишня замороженная" priceNew="85.00" />
+									{
+										fruct.map((obj)=>(
+											<Card {...obj} />
+										))
+									}
 								</div>
 								<Cart />
 							</div>
