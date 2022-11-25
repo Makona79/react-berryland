@@ -1,7 +1,14 @@
 import React from "react";
 import { useState } from "react";
 
-export const Card = ({ title, imageUrl, priceNew, priceOld, sizes }) => {
+export const Card = ({
+  title,
+  imageUrlS,
+  imageUrl,
+  priceNew,
+  priceOld,
+  sizes,
+}) => {
   const [cardCount, setCardCount] = useState(1);
   const plusCountCard = () => {
     setCardCount(cardCount + 1);
@@ -14,8 +21,8 @@ export const Card = ({ title, imageUrl, priceNew, priceOld, sizes }) => {
       <h4 className="card__title">{title}</h4>
       <a href="#" className="card__image">
         <picture>
-          <source srcSet="img/card/card01.webp" type="image/webp" />
-          <img src={imageUrl} alt="Малина замороженная Премиум" />
+          <source srcSet={imageUrlS} type="image/webp" />
+          <img src={imageUrl} alt={title} />
         </picture>
       </a>
       <div className="card__box-price">

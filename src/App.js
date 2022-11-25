@@ -10,6 +10,7 @@ function App() {
 	const fruct = [
 		{
 			"id": 0,
+			"imageUrlS": "img/card/card01.webp",
 			"imageUrl": "img/card/card01.png",
 			"title": "Малина замороженная Премиум (2.5 кг)",
 			"priceNew": 85.00,
@@ -20,6 +21,7 @@ function App() {
 		},
 		{
 			"id": 1,
+			"imageUrlS": "img/card/card02.webp",
 			"imageUrl": "img/card/card02.png",
 			"title": "Голубика замороженная",
 			"priceNew": 93.00,
@@ -30,6 +32,7 @@ function App() {
 		 },
 		 {
 			"id": 2,
+			"imageUrlS": "img/card/card03.webp",
 			"imageUrl": "img/card/card03.png",
 			"title": "Вишня замороженная",
 			"priceNew": 87.00,
@@ -40,6 +43,7 @@ function App() {
 		 },
 		 {
 			"id": 3,
+			"imageUrlS": "img/card/card04.webp",
 			"imageUrl": "img/card/card04.png",
 			"title": "Куркума с имбирем замороженные органические",
 			"priceNew": 93.00,
