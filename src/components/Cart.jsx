@@ -14,7 +14,7 @@ export const Cart = () => {
         </div>
         <div className="cart__button">
           <button className="cart__pay btn btn_cart">Оплатить</button>
-          <Link to="/cart" className="cart__cart btn btn_cart2">
+          <Link to="/cartFull" className="cart__cart btn btn_cart2">
             Корзина
           </Link>
         </div>

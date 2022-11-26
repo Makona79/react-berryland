@@ -1,9 +1,9 @@
 import React from "react";
-import "./App.css";
+import "./app.scss";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Cart from "./pages/Cart";
+import CartFull from "./pages/CartFull";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 function App() {
@@ -21,7 +21,7 @@ function App() {
             <div className="shop__body">
               <Routes>
                 <Route path="/" element={<Home />}></Route>
-                <Route path="/cart" element={<Cart />} />
+                <Route path="/cartFull" element={<CartFull />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </div>
