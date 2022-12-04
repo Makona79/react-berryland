@@ -21,9 +21,11 @@ function App() {
             <div className="shop__body">
               <Routes>
                 <Route path="/" element={<Home />}></Route>
+                <Route path="/berryland-app" element={<Home />} />
                 <Route path="/cartFull" element={<CartFull />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
+              berryland-app
             </div>
           </div>
         </section>
